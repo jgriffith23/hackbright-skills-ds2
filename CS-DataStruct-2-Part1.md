@@ -10,7 +10,12 @@ This markdown file contains my responses to this weekend's discussion questions.
 ## Graphs
 
 1. A graph is a collection of nodes connected by arcs that (usually) demonstrate meaningful relationships.
-2. Graphs differ from trees in three ways. First, graphs can have *cycles*--that is, nodes can connect back to earlier nodes in the graph directly, or even to themselves. Graphs can also be *undirected*, which means that when traversing the graph, you can travel both forward and backward; trees are directed, meaning you can only go one way. Finally, trees usually indicate some sort of hierarchy, while a graph usually just shows connections. The two images below are a tree and a graph, respectively. ![Tree](rbtree.png) ![Graph](graph.png)
+2. Graphs differ from trees in three ways. First, graphs can have *cycles*--that is, nodes can connect back to earlier nodes in the graph directly, or even to themselves. Graphs can also be *undirected*, which means that when traversing the graph, you can travel both forward and backward; trees are directed, meaning you can only go one way. Finally, trees usually indicate some sort of hierarchy, while a graph usually just shows connections. The two images below are a tree and a graph, respectively. 
+
+![Tree](rbtree.png) 
+
+![Graph](graph.png)
+
 3. You could model an ecosystem's food chain as a graph, where animals are connected to animals they eat by directed arcs. You could also model a map of cities as a graph. The roads between those cities, or perhaps the flight paths, would be arcs; I believe the traveling salesman problem represents the salesman's route as a graph, for example.
 
 ## Performance of Different Data Structures
@@ -160,4 +165,3 @@ Now, we could pick a new pivot in one of the two slices of this list that don't 
 
 1. You'd probably want to use git branching when you have multiple developers working on a project. Coupled with code review before accepting pull requests in GitHub, this could help team members avoid breaking one another's code. Big companies that actually deploy code to users would also want to have a production/deploy branch and a development branch, to allow working code to be pushed to users while new features are built/tested separately.
 2. A *pull request* is a way to ask a project owner to merge your branch with another branch of the project. You can make pull requests once you've created a branch, made changes, committed, and pushed those changes to your remote version of that branch. Once you submit a pull request on a project, someone with the power to accept pull requests should review your work and if all looks good, allow the merge to happen.
-
