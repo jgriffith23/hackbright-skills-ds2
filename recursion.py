@@ -112,14 +112,20 @@ def num_nodes(tree):
     if tree is None:
         return 0
 
-    # Otherwise, we should count this node, and the length of its
-    # list of children.
+    # Otherwise, count all nodes in all subtrees of this tree.
     else:
-        return 1 + len(tree.children)
+        # Since we're looking at a new subtree, start counting at 0.
+        count = 0
+        for child in tree.children:
 
-    # Now, for each child in the list, do the same thing.
-    for child in tree.children:
-        num_nodes(child)
+            # Accumulate the node count here.
+            count = count + num_nodes(child)
+
+        # When we return, we have to add 1 to account for the first
+        # node passed.
+        return count + 1
+            
+            
 
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
