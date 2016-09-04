@@ -77,6 +77,7 @@ def merge_lists(tuvok, neelix):
     tuvix.extend(neelix)
     return tuvix
 
+
 ##########ADVANCED##########
 def merge_sort(lst):
     """
@@ -89,10 +90,20 @@ def merge_sort(lst):
     >>> merge_sort([6, 2, 3, 9, 0, 1])
     [0, 1, 2, 3, 6, 9]
     """
-    pass
 
+    # Base case: A list of length 1 is always sorted!
+    if len(lst) == 1:
+        return lst
 
+    # Find the middle index of the list
+    median = len(lst) / 2
 
+    # Sort the two halves of the list, recursively.
+    list1 = merge_sort(lst[:median])
+    list2 = merge_sort(lst[median:])
+
+    # Merge the sorted halves
+    return merge_lists(list1, list2)
 
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
