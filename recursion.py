@@ -12,7 +12,16 @@ def print_item(my_list, i=0):
         3
 
     """
-    pass
+
+    # Degenerative base case: If the index to print goes beyond the
+    # length of the list, we know we're done printing.
+    if i > len(my_list)-1:
+        return
+
+    # Until we hit the base case, print the list element at the
+    # passed index, and recurse with an incremented i argument.
+    print my_list[i]
+    print_item(my_list, i+1)
 
 
 # 2. Write a function that uses recursion to print each node in a tree.
@@ -39,7 +48,22 @@ def print_all_tree_data(tree):
         3
 
     """
-    pass
+
+    # Base Case: If we hit a tree that is none, then we've reached the
+    # end of a path. 
+    if tree is None:
+        return
+
+    # If we actually have a tree to print, print its data.
+    else:
+        print tree.data
+
+    # Once we've printed the tree, advance in the tree by looping
+    # over its children and printing them, recursively.
+    for child in tree.children:
+        print_all_tree_data(child)
+
+
 
 # 3. Write a function that uses recursion to find the length of a list.
 
