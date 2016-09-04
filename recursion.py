@@ -74,7 +74,16 @@ def list_length(my_list):
         4
 
     """
-    pass
+
+    # Base case: we always know the length of an empty list! (It's 0.)
+    if my_list == []:
+        return 0
+
+    # Otherwise, we know there's at least one thing in it, so add 1 and
+    # call recursively on a section of the list that doesn't contain the element
+    # we just looked at.
+    else:
+        return 1 + list_length(my_list[1:])
 
 
 # 4. Write a function that uses recursion to count how many nodes are in a tree.
@@ -98,7 +107,19 @@ def num_nodes(tree):
         3
     """
 
-    pass
+    # Base case: If a tree is none, we're at the end of a path. This one
+    # doesn't count, so pass back 0 to the prev call.
+    if tree is None:
+        return 0
+
+    # Otherwise, we should count this node, and the length of its
+    # list of children.
+    else:
+        return 1 + len(tree.children)
+
+    # Now, for each child in the list, do the same thing.
+    for child in tree.children:
+        num_nodes(child)
 
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
