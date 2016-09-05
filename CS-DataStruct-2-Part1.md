@@ -10,10 +10,7 @@ This markdown file contains my responses to this weekend's discussion questions.
 ## Graphs
 
 1. A graph is a collection of nodes connected by arcs that (usually) demonstrate meaningful relationships.
-2. Graphs differ from trees in three ways. First, graphs can have *cycles*--that is, nodes can connect back to earlier nodes in the graph directly, or even to themselves. Graphs can also be *undirected*, which means that when traversing the graph, you can travel both forward and backward; trees are directed, meaning you can only go one way. Finally, trees usually indicate some sort of hierarchy, while a graph usually just shows connections. The two images below are a tree and a graph, respectively. 
-
-![](tree-graph.png)
-
+2. Graphs differ from trees in three ways. First, graphs can have *cycles*--that is, nodes can connect back to earlier nodes in the graph directly, or even to themselves. Graphs can also be *undirected*, which means that when traversing the graph, you can travel both forward and backward; trees are directed, meaning you can only go one way. Finally, trees usually indicate some sort of hierarchy, while a graph usually just shows connections. The two images below are a tree and a graph, respectively. ![](tree-graph.png)
 3. You could model an ecosystem's food chain as a graph, where animals are connected to animals they eat by directed arcs. You could also model a map of cities as a graph. The roads between those cities, or perhaps the flight paths, would be arcs; I believe the traveling salesman problem represents the salesman's route as a graph, for example.
 
 ## Performance of Different Data Structures
