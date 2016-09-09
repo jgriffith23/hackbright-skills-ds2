@@ -39,9 +39,11 @@ This markdown file contains my responses to this weekend's discussion questions.
 | Data Structure           | Get    | Add    | Delete | Iterate| Memory |
 | -------------            |------- | :----- |:-----: |------: |------: |
 |Dictionary(Hash Map)      |O(1)    |O(1)	 |O(1)	  |O(n)    |medium  |
-|Set (Hash Map)	 	       |**O(1)**|**O(1)**|**O(1)**|**O(1)**|**medium**|
+|Set (Hash Map)	 	       |**O(1)**|**O(1)**|**O(1)**|**~~O(1)~~ O(n)**|**medium**|
 |Binary Search Tree    |**O(log n)**|**O(n)**|**O(n)**|**O(1)**|**little**|
 |Tree            	       |**O(n)**|**O(1)**|**O(1)**|**O(1)**|**little**|
+
+*Note: Set's iterate runtime corrected.*
 
 1. **Set (Hash Map)**: A set is just a dictionary without keys, so it should have the same runtime complexity for these actions. The memory cost should scale the same, too.
 2. **Binary Search Tree**: In a binary search tree, the nodes are organized such that you can throw away half the incorrect results every time you change to a different branch. That makes searching O(log n). At worst, adding an item to a binary search tree could be as much as O(n), because there's a chance that adding the item will force you to rebalance the tree. The same goes for deleting. Finding the next item should be O(1), since all items track their children. BSTs should take up relatively little memory, since you only have to store the nodes themselves; there's no need to allocate extra space.
@@ -99,7 +101,7 @@ Then, the sort would split the first list into two lists:
 [4]       [2]
 ```
 
-Since both lists are now single-element lists, they can bem merged:
+Since both lists are now single-element lists, they can be merged:
 
 ```
 [2, 4]
